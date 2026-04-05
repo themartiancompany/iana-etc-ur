@@ -1922,6 +1922,9 @@ jobs:
             -Ss \
             "boost" || \
           true
+          mkdir \
+            -p \
+            "/root/temp"
           cp \
             -v \
             -r \
