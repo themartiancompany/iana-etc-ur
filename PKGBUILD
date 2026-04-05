@@ -167,12 +167,6 @@ elif [[ "${_evmfs}" == "false" ]]; then
     "${_protocols_sum}"
   )
 fi
-source+=(
-  'license-from-upstream'
-)
-sha256sums+=(
-  'dd37e92942d5a4024f1c77df49d61ca77fc6284691814903a741785df61f78cb'
-)
 validpgpkeys=(
   # Truocolo
   #   <truocolo@aol.com>
@@ -269,10 +263,10 @@ package() {
   install \
     -vdm755 \
     "${pkgdir}/etc"
-  install \
-    -vDm644 \
-    "license-from-upstream" \
-    "${pkgdir}/usr/share/licenses/iana-etc/LICENSE"
+  echo \
+    "The contents of this package are" \
+    "inelligible for copyright protection." > \
+    "${pkgdir}/usr/share/licenses/${_pkg}/LICENSE"
   install \
     -vDm644 \
     "${_ports}.xml" \
