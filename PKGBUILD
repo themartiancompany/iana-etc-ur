@@ -119,6 +119,7 @@ _tag_name="commit"
 _tarname="${pkgname}-${_tag}"
 _tarfile="${_tarname}.${_archive_format}"
 source=()
+sha256sums=()
 _bundle_sum="f66aea2c9bd20bcd827ce58e9176b4bac78ab2489b72b07ea4b6b5dc33dee54f"
 _bundle_sig_sum="b09b2b555d2e4ffe41865420f88931257f0b070b13c1699525a962cea64ab305"
 _ports_sum='05dcb6075f7b06abb876f645c9f778653b558566f28b336d3f42374e3ababbaf'
@@ -155,21 +156,21 @@ if [[ "${_evmfs}" == "true" ]]; then
     )
   fi
 elif [[ "${_evmfs}" == "false" ]]; then
-  ports_src="${_http}/${_ns}/${_pkg}/${_ports}.xml"
-  protocols_src="${_http}/${_ns}/${_pkg}/${_protocols}.xml"
+  _ports_src="${_http}/${_ns}/${_pkg}/${_ports}.xml"
+  _protocols_src="${_http}/${_ns}/${_pkg}/${_protocols}.xml"
   source+=(
     "${_ports_src}"
-    "${protocols_src}"
+    "${_protocols_src}"
   )
   sha256sums+=(
     "${_ports_sum}"
-    "${_protocols_sig_sum}"
+    "${_protocols_sum}"
   )
 fi
-source=(
+source+=(
   'license-from-upstream'
 )
-sha256sums=(
+sha256sums+=(
   'dd37e92942d5a4024f1c77df49d61ca77fc6284691814903a741785df61f78cb'
 )
 validpgpkeys=(
