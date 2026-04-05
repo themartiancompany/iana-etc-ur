@@ -2070,6 +2070,9 @@ jobs:
             -r \
             * \
             "/root/temp/"
+          cp \
+            "license-from-upstream" \
+            "license-from-upstream.windows"
           dos2unix \
             "PKGBUILD"
           cp \
