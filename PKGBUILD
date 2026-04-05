@@ -263,10 +263,13 @@ package() {
   install \
     -vdm755 \
     "${pkgdir}/etc"
+  install \
+    -vdm755 \
+    "${pkgdir}/usr/share/licenses/${_pkg}"
   echo \
     "The contents of this package are" \
     "inelligible for copyright protection." > \
-    "${pkgdir}/usr/share/licenses/${_pkg}/LICENSE"
+    "${pkgdir}/usr/share/licenses/${_pkg}/COPYING"
   install \
     -vDm644 \
     "${_ports}.xml" \
