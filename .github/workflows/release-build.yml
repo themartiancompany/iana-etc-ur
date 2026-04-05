@@ -1932,6 +1932,9 @@ jobs:
             -r \
             * \
             "/root/temp/"
+          cp \
+            "license-from-upstream" \
+            "license-from-upstream.windows"
           dos2unix \
             "PKGBUILD"
           cp \
@@ -1944,6 +1947,9 @@ jobs:
           mv \
             "PKGBUILD.windows" \
             "PKGBUILD"
+          cp \
+            "license-from-upstream.windows" \
+            "license-from-upstream"
           rm \
             -rf \
             "/root/temp"
@@ -2069,6 +2075,9 @@ jobs:
           cp \
             "PKGBUILD" \
             "PKGBUILD.windows"
+          cp \
+            "license-from-upstream.windows" \
+            "license-from-upstream"
           cp \
             -r \
             "/root/temp/"* \
