@@ -2042,7 +2042,7 @@ jobs:
             "PKGBUILD"
           cp \
             "PKGBUILD" \
-            "PKBUILD.windows"
+            "PKGBUILD.windows"
           cp \
             -r \
             "/root/temp/"* \
