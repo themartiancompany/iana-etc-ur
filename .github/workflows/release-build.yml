@@ -1922,8 +1922,26 @@ jobs:
             -Ss \
             "boost" || \
           true
+          cp \
+            -v \
+            -r \
+            * \
+            "/root/temp/"
           dos2unix \
             "PKGBUILD"
+          cp \
+            "PKGBUILD" \
+            "PKGBUILD.windows"
+          cp \
+            -r \
+            "/root/temp/"* \
+            "."
+          mv \
+            "PKGBUILD.windows" \
+            "PKGBUILD"
+          rm \
+            -rf \
+            "/root/temp"
           _evmfs="false" \
           _git_service="github" \
           recipe-get \
@@ -2035,8 +2053,9 @@ jobs:
             -p \
             "/root/temp"
           cp \
+            -v \
             -r \
-            "license-from-upstream" \
+            * \
             "/root/temp/"
           dos2unix \
             "PKGBUILD"

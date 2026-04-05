@@ -1,4 +1,6 @@
-#s SPDX-License-Identifier: AGPL-3.0
+#          dos2unix \
+            "PKGBUILD"
+s SPDX-License-Identifier: AGPL-3.0
 
 #    ----------------------------------------------------------------------
 #    Copyright © 2024, 2025, 2026  Pellegrino Prevete
@@ -83,7 +85,7 @@ _commit="45b16530eb92c9ef628787234d90b3c06a43bf37"
 pkgver=20260328
 _ports=service-names-port-numbers-${pkgver}
 _protocols=protocol-numbers-20260310
-pkgrel=6
+pkgrel=7
 _pkgdesc=(
   "/etc/protocols and /etc/services"
   "provided by IANA."
