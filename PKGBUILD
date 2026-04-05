@@ -83,7 +83,7 @@ _commit="45b16530eb92c9ef628787234d90b3c06a43bf37"
 pkgver=20260328
 _ports=service-names-port-numbers-${pkgver}
 _protocols=protocol-numbers-20260310
-pkgrel=2
+pkgrel=3
 _pkgdesc=(
   "/etc/protocols and /etc/services"
   "provided by IANA."
@@ -267,7 +267,7 @@ package() {
   cd \
     "${srcdir}"
   install \
-    -vd755 \
+    -vdm755 \
     "${pkgdir}/etc"
   install \
     -vDm644 \
