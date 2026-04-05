@@ -2036,8 +2036,8 @@ jobs:
             "/root/temp"
           cp \
             -r \
-            * \
-            "/root/temp"
+            "license-from-upstream" \
+            "/root/temp/"
           dos2unix \
             "PKGBUILD"
           cp \
