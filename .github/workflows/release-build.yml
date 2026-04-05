@@ -2051,6 +2051,8 @@ jobs:
           done
       - name:
           Builds the Windows package.
+      - uses:
+          actions/checkout@v3
         run: |
           mkdir \
             -p \
